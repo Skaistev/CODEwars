@@ -31,5 +31,42 @@ function deepStrictEqual (a,b){
         console.log(sumArray(null));
         console.log(sumArray(undefined));
         
+        function correctTail (bod, tail) {
+  
+            sub = bod.substr(bod.length-(tail.length));
+            console.log(sub)
+            
+            if (sub === tail.at(tail.length-1)) {
+              return true
+            }
+            else {
+              return false}}
+              console.log(correctTail("fox","x"));
+              ///!!!!!!!!!!
+              const correctTail1 = (x,y)=>x.startsWith(y)
+              console.log(correctTail1("fox","f"));
 
-    
+
+              function sumMix(x){
+
+                let = 0;
+                let z = [];
+                
+                for (let i =0; i<x.length;i++){
+                    
+                        z.push(parseFloat(x[i]));
+                    }
+                   const sum = z.reduce((a,b)=>a+b)
+                
+        
+                    return sum; 
+                }
+                
+             
+        
+             console.log(sumMix([9, 3, '7', '3']))
+             function repeatStr (n, s) {
+                return s.repeat(n);
+             }
+            console.log(repeatStr(3, "*"), "***");
+            console.log(repeatStr(5, "#"), "#####");
