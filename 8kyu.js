@@ -65,8 +65,59 @@ function deepStrictEqual (a,b){
              
         
              console.log(sumMix([9, 3, '7', '3']))
+
+
              function repeatStr (n, s) {
                 return s.repeat(n);
              }
             console.log(repeatStr(3, "*"), "***");
             console.log(repeatStr(5, "#"), "#####");
+            
+            function findAverage(array) {
+
+                if (array.length===0){
+                  return 0} 
+                return array.reduce((t,e) => t+e)/array.length
+              }
+              console.log(findAverage([1,2,3]),2);
+              console.log(findAverage([]),0);
+
+
+
+const rps = (p1, p2) => {
+    if (p1===p2){return "Draw!"}
+    if(p1==="rock"&& p2==="scissors"||p1==="scissors"&& p2==="paper"||p1==="paper"&&p2==="rock") {
+      return `Player 1 won!`}
+     else{return `Player 2 won!`}
+    }
+  
+  
+  console.log(rps('rock', 'scissors'),1);
+  console.log(rps('scissors', 'paper'),1);
+  console.log(rps('paper', 'rock'),1);
+  
+  console.log(rps('scissors', 'rock'), 2);
+  console.log(rps('paper', 'scissors'), 2);
+  console.log(rps('rock', 'paper'), 2);
+  console.log(rps('rock', 'rock'), 2);
+
+  
+  function divisibleBy(numbers, divisor){
+ 
+    let array = [];
+    if (numbers[0]===0){array.push(numbers[0])}
+    numbers.reduce((t,e)=>{
+      if(e%divisor===0||e===0){
+        array.push(e)}})
+        if(numbers.length<2&&numbers[0]%divisor===0&&numbers[0]!==0)
+        {array.push(numbers[0])}
+  return array
+  }
+  
+  console.log(divisibleBy([1,2,3,4,5,6], 2), [2,4,6]);
+  console.log(divisibleBy([1,2,3,4,5,6], 3), [3,6]);
+  console.log(divisibleBy([0,1,2,3,4,5,6], 4), [0,4]);
+  console.log(divisibleBy([0], 4), [0]);
+  console.log(divisibleBy([1,3,5], 2), [])
+  console.log(divisibleBy([1,2,0,3,4,5,6], 4), [0,4]);
+  
