@@ -120,4 +120,13 @@ const rps = (p1, p2) => {
   console.log(divisibleBy([0], 4), [0]);
   console.log(divisibleBy([1,3,5], 2), [])
   console.log(divisibleBy([1,2,0,3,4,5,6], 4), [0,4]);
+
+  function solution(str){
+    word = ""
+    for (let i=str.length-1; i>=0; i--){
+        word += str[i];
+  }return word;
+  }
+  
+  console.log(solution('world'), 'dlrow');
   
