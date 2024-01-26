@@ -8,3 +8,8 @@ function array (f){
     
     console.log(array(["1.1","2.2"]))
     
+function michaelPays(costs) {
+  
+return parseFloat((costs<5?costs:costs/3<10?costs-(costs/3):costs-10).toFixed(2))
+                
+}
