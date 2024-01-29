@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "juodrastis": "node --watch juodrastis.js",
+    "juodrastis2": "node --watch juodrastis2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "saulute",
