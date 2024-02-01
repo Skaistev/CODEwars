@@ -130,3 +130,18 @@ const rps = (p1, p2) => {
   
   console.log(solution('world'), 'dlrow');
   
+
+  function splitAndMerge(string, separator) {
+    const a = string.split(' ');
+    let f='';
+    for(i=0;i<a.length;i++){
+       f += a[i].split('').join(separator)+' ';
+    }
+    return f.trimEnd()
+    }
+        
+    
+    console.log(splitAndMerge("My name is John"," ") , "M y n a m e i s J o h n");
+    console.log(splitAndMerge("My name is John","-") , "M-y n-a-m-e i-s J-o-h-n");
+    console.log(splitAndMerge("Hello World!",".") , "H.e.l.l.o W.o.r.l.d.!");
+    console.log(splitAndMerge("Hello World!",",") , "H,e,l,l,o W,o,r,l,d,!");
